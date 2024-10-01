@@ -4,7 +4,7 @@ A simple web application Built using AWS, which calculates the value of power of
 
 ![Web-application](https://github.com/AbdulR431/Math_Power_Webapp_hosted_using_AWS/blob/main/Project-Images/AWS%20project.PNG)
 
-#AWS Services Used:
+# AWS Services Used:
 
 ![AWS Services Used in project](https://github.com/AbdulR431/Math_Power_Webapp_hosted_using_AWS/blob/main/Project-Images/AWS%20Services%20Used.PNG)
 
@@ -14,9 +14,9 @@ A simple web application Built using AWS, which calculates the value of power of
 -> AWS Dynamodb
 -> AWS IAM.
 
-#Steps:
+# Steps:
 
-#Step 1:
+# Step 1:
 
 html file is Deployed on the web using the AWS Amplify.
 
@@ -42,12 +42,12 @@ Hosting: Amplify provides a hosting platform for your application. This means th
 Analytics: Amplify provides a set of analytics tools that can help you understand how your application is being used. This information can be used to improve your application's performance and user experience.
 Overall, AWS Amplify is a powerful and flexible platform that can be used to build and deploy a wide variety of web and mobile applications. If you are looking for a way to simplify the process of building and managing cloud-powered applications, Amplify is a great option to consider.
 
-#Step 2:
+# Step 2:
 
 Created a Lambda function of type python.
 Then tested and deployed the code necessary to calculate the value of power of a base.
 
-#Step 3:
+# Step 3:
 
 Built the RestApi using AWS API Gateway with method Post, then Lambda is attached to the method.
 Enabled CORS
@@ -56,20 +56,20 @@ As our web-application is deployed using Amplify and We use AWS Lambda to calcul
 Then the API is Deployed.
 Invoke Url is saved.
 
-#Step 4:
+# Step 4:
 
 An AWS Dynamodb Table is created and its arn(amazon resource name) is stored.
 
 ![creation of the Dynamodb table](https://github.com/AbdulR431/Math_Power_Webapp_hosted_using_AWS/blob/main/Project-Images/dynamodb%20usage.PNG)
 
-#Step 5:
+# Step 5:
 
 Now Using AWS IAM we have to give necessary permissions to the Lamba in order to ensure Lambda is able to store the calculated result in the dynamodb table.
 Attached a JSON policy in which arn of the dynamodb table is pasted.
 
 ![Attached policy](https://github.com/AbdulR431/Math_Power_Webapp_hosted_using_AWS/blob/main/Project-Images/JSON%20policy.PNG)
 
-#Step 6:
+# Step 6:
 
 Now in the final step Added the API Invoke url to the html file which ensure its connection to the API.
 
@@ -77,12 +77,12 @@ Now in the final step Added the API Invoke url to the html file which ensure its
 
 Then Again deploy the changes using AWS Amplify.
 
-#Result:
+# Result:
 
 Finally our Simple Web-application is ready to be used.
 
 ![Final Result](https://github.com/AbdulR431/Math_Power_Webapp_hosted_using_AWS/blob/main/Project-Images/AWS%20project%20result.PNG)
 
-#Thank YOU
-#The End
+# Thank YOU
+# The End
 
