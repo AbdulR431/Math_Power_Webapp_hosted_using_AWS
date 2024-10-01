@@ -56,7 +56,7 @@ Now in the final step Added the API Invoke url to the html file which ensure its
 Then Again deploy the changes using AWS Amplify.
 #Result:
 Finally our Simple Web-application is ready to be used.
-![Final Result[](https://github.com/AbdulR431/Math_Power_Webapp_hosted_using_AWS/blob/main/Project-Images/AWS%20project%20result.PNG)
+![Final Result](https://github.com/AbdulR431/Math_Power_Webapp_hosted_using_AWS/blob/main/Project-Images/AWS%20project%20result.PNG)
 #Thank YOU
 #The End
 
