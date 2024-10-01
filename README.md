@@ -49,11 +49,54 @@ Overall, AWS Amplify is a powerful and flexible platform that can be used to bui
 # Step 2:
 
 Created a Lambda function of type python.
+
+Brief Use of AWS Lambda:
+
+AWS Lambda is a serverless computing platform that lets you run code without provisioning or managing servers. You pay only for the compute time you consume. With Lambda, you can upload your code and configure it to run in response to various triggers, such as API calls, file uploads, or scheduled events.   
+
+Key benefits of using AWS Lambda:
+
+Serverless: No need to manage servers or infrastructure.
+Scalable: Lambda automatically scales your code to handle changes in demand.
+Cost-effective: Pay only for the compute time you use.
+High availability: Lambda is designed for high availability and fault tolerance.
+Integration: Easily integrates with other AWS services and third-party applications.
+
+Common use cases for AWS Lambda:
+
+API development: Create RESTful APIs without managing servers.
+Data processing: Process large datasets at scale.
+Event-driven applications: Trigger actions based on events from other services (e.g., S3, Kinesis).
+Real-time applications: Process data in real-time.
+Microservices architecture: Build and deploy small, independent services.
+In essence, AWS Lambda provides a flexible and efficient way to run code without the overhead of managing servers, making it a popular choice for building scalable and cost-effective applications.
 Then tested and deployed the code necessary to calculate the value of power of a base.
 
 # Step 3:
 
 Built the RestApi using AWS API Gateway with method Post, then Lambda is attached to the method.
+
+Brief about AWS API Gateway:
+AWS API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure RESTful APIs at any scale. It acts as a front door for applications that access backend services.   
+
+Key features and benefits of AWS API Gateway:
+RESTful APIs: Create and manage RESTful APIs with various HTTP methods (GET, POST, PUT, DELETE, etc.).
+API Gateway proxy integration: Easily integrate with backend services like AWS Lambda, AWS EC2, or HTTP endpoints.
+API Gateway Lambda proxy integration: Directly integrate with AWS Lambda functions for serverless computing.
+API key management: Secure your APIs with API keys to control access and usage.
+Usage plans: Create usage plans to limit API usage and throttle requests.
+Custom authorizers: Implement custom authorization mechanisms for fine-grained access control.
+Caching: Improve performance by caching API responses.
+Monitoring and analytics: Track API usage, latency, and errors through built-in metrics and logs.
+Deployment stages: Create different deployment stages (e.g., dev, test, prod) for managing API versions.
+
+Use cases for AWS API Gateway:
+Mobile and web applications: Expose backend services to mobile and web apps.
+IoT devices: Provide APIs for IoT devices to communicate with cloud-based services.
+Microservices architecture: Create APIs for microservices to interact with each other.
+Serverless applications: Build serverless applications using Lambda and API Gateway.
+In summary, AWS API Gateway simplifies the process of building, managing, and securing APIs, making it a valuable tool for developers building cloud-native applications.
+
 Enabled CORS
 Use of CORS: CORS (Cross-Origin Resource Sharing) is a mechanism that allows web pages to make requests to a server on a different domain than the one from which the page originated. By enabling CORS in your AWS API Gateway, you're essentially granting permission for your API to be accessed from different domains, allowing for more flexible and integrated web applications.
 As our web-application is deployed using Amplify and We use AWS Lambda to calculate the value of power of a base, enabling cors triggers the lambda function and providers the user output.
@@ -64,12 +107,56 @@ Invoke Url is saved.
 
 An AWS Dynamodb Table is created and its arn(amazon resource name) is stored.
 
+Brief about AWS Dynamodb:
+AWS DynamoDB is a fully managed NoSQL database service that provides fast and reliable performance for any scale. It is a key-value store that offers high availability, low latency, and automatic scaling.
+
+Key features and benefits of DynamoDB:
+High performance: Delivers consistent low latency performance, even at massive scale.
+Scalability: Automatically scales to handle any workload, from small to massive.
+Durability: Provides strong consistency and durability for your data.
+Flexibility: Supports both document and on-demand capacity modes.
+Global tables: Replicate data across multiple regions for low-latency access.
+Secondary indexes: Create secondary indexes for efficient querying on non-primary key attributes.
+Stream processing: Capture and process data changes in real-time using DynamoDB Streams.
+Serverless: No need to manage servers or infrastructure.
+
+Use cases for DynamoDB:
+Mobile and web applications: Store and retrieve data for mobile and web apps.
+Games: Store game data, user profiles, and leaderboards.
+IoT applications: Store and process data from IoT devices.
+Real-time analytics: Process data in real-time for analytics and reporting.
+Serverless applications: Use as a data store for serverless applications built on Lambda and API Gateway.
+In summary, DynamoDB is a powerful and flexible NoSQL database service that can handle a wide range of workloads, making it a popular choice for building scalable and reliable applications.
+
 ![creation of the Dynamodb table](https://github.com/AbdulR431/Math_Power_Webapp_hosted_using_AWS/blob/main/Project-Images/dynamodb%20usage.PNG)
 
 # Step 5:
 
 Now Using AWS IAM we have to give necessary permissions to the Lamba in order to ensure Lambda is able to store the calculated result in the dynamodb table.
 Attached a JSON policy in which arn of the dynamodb table is pasted.
+
+Brief about AWS IAM:
+AWS Identity and Access Management (IAM) is a service that allows you to securely manage users, groups, and permissions in AWS. It provides granular control over who can access your AWS resources and what actions they can perform.
+
+Key features and benefits of IAM:
+Users: Create and manage AWS users with unique credentials.
+Groups: Organize users into groups for efficient permission management.
+Roles: Assign permissions based on roles, allowing temporary access to AWS resources.
+Policies: Define policies to specify what actions users or groups can perform on AWS resources.
+Multi-factor authentication (MFA): Enhance security by requiring MFA for user sign-in.
+Access keys: Generate and manage access keys for programmatic access to AWS services.
+Federation: Integrate with external identity providers (IdPs) for single sign-on (SSO).
+IAM roles for services: Assign IAM roles to AWS services to grant them permissions to access resources.
+Conditional permissions: Apply conditions to policies based on attributes like time, location, or resource tags.
+
+Use cases for IAM:
+User management: Manage user accounts and permissions within your AWS environment.
+Access control: Implement granular access control for AWS resources.
+Security best practices: Enforce security best practices by using IAM features like MFA and conditional permissions.
+Cross-account access: Grant access to resources in other AWS accounts using IAM roles.
+Integration with third-party applications: Integrate with external identity providers for SSO.
+
+In summary, IAM is a crucial service for managing user access and security in AWS, ensuring that only authorized users can perform specific actions on your AWS resources.
 
 ![Attached policy](https://github.com/AbdulR431/Math_Power_Webapp_hosted_using_AWS/blob/main/Project-Images/JSON%20policy.PNG)
 
